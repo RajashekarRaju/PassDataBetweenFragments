@@ -12,10 +12,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val firstFragment = FirstFragment()
+        val mainFragment = MainFragment()
         val fragmentManager: FragmentManager = supportFragmentManager
         val fragmentTransaction: FragmentTransaction = fragmentManager.beginTransaction()
-        fragmentTransaction.add(R.id.fragment_container, firstFragment)
+        fragmentTransaction.add(R.id.fragment_container, mainFragment)
         fragmentTransaction.addToBackStack(null)
         fragmentTransaction.commit()
     }
