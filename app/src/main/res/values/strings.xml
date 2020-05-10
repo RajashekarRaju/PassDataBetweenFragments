@@ -1,6 +1,33 @@
 <resources>
     <string name="app_name">PassDataBetweenFragments</string>
+    <string name="pass_simple_data_card_text">Pass Simple Data</string>
+    <string name="list_to_detail_card_text">List To Detail</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_rugby">Rugby</string>
+    <string name="title_cricket">Cricket</string>
+    <string name="title_basketball">Basketball</string>
+    <string name="title_hockey">Hockey</string>
+    <string name="title_volleyball">Volleyball</string>
+    <string name="title_esports">Esports</string>
+    <string name="title_kabbadi">Kabaddi</string>
+    <string name="title_baseball">Baseball</string>
+    <string name="title_mma">MMA</string>
+    <string name="title_soccer">Soccer</string>
+    <string name="title_handball">Handball</string>
+    <string name="title_tennis">Tennis</string>
+
+    <string name="subtitle_rugby">19th century</string>
+    <string name="subtitle_cricket">16th century</string>
+    <string name="subtitle_basketball">1891</string>
+    <string name="subtitle_hockey">19th century</string>
+    <string name="subtitle_volleyball">1895</string>
+    <string name="subtitle_esports">1972</string>
+    <string name="subtitle_kabbadi">1921</string>
+    <string name="subtitle_baseball">1869</string>
+    <string name="subtitle_mma">1993</string>
+    <string name="subtitle_soccer">1863</string>
+    <string name="subtitle_handball">1917</string>
+    <string name="subtitle_tennis">1859</string>
+    <string name="hint_user">Enter Text</string>
+    <string name="button_text">Pass Data</string>
 </resources>
