@@ -12,19 +12,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val simpleFragment = FirstFragment()
-        // Get the FragmentManager and start a transaction.
-        // Get the FragmentManager and start a transaction.
+        val firstFragment = FirstFragment()
         val fragmentManager: FragmentManager = supportFragmentManager
-        val fragmentTransaction: FragmentTransaction = fragmentManager
-            .beginTransaction()
-
-        // Add the SimpleFragment.
-
-        // Add the SimpleFragment.
-        fragmentTransaction.add(
-            R.id.fragment_container,
-            simpleFragment
-        ).addToBackStack(null).commit()
+        val fragmentTransaction: FragmentTransaction = fragmentManager.beginTransaction()
+        fragmentTransaction.add(R.id.fragment_container, firstFragment)
+        fragmentTransaction.addToBackStack(null)
+        fragmentTransaction.commit()
     }
 }
