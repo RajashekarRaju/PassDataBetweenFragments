@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.widget.Toolbar
 import androidx.core.os.bundleOf
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentTransaction
@@ -35,10 +36,16 @@ class ListFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         val view: View = inflater.inflate(R.layout.fragment_list, container, false)
+        val toolbar: Toolbar = view.findViewById(R.id.toolbar_list_fragment)
         recyclerView = view.findViewById(R.id.recycler_view)
         val sportsList = Sports.sportsList(requireContext())
         adapter = SportsAdapter(sportsList, sportsItemListener)
         recyclerView.adapter = adapter
+
+        toolbar.setNavigationOnClickListener {
+            requireActivity().onBackPressed()
+        }
+
         return view
     }
 

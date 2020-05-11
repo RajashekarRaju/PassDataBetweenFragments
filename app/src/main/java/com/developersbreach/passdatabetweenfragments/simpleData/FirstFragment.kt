@@ -6,7 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import android.widget.TextView
+import androidx.appcompat.widget.Toolbar
 import androidx.core.os.bundleOf
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentTransaction
@@ -32,12 +32,13 @@ class FirstFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val view:View = inflater.inflate(R.layout.fragment_first, container, false)
+        val view: View = inflater.inflate(R.layout.fragment_first, container, false)
 
+        val toolbar: Toolbar = view.findViewById(R.id.toolbar_first_fragment)
         val editText: TextInputEditText = view.findViewById(R.id.edit_text)
         val button: Button = view.findViewById(R.id.pass_data_button)
-        button.setOnClickListener {
 
+        button.setOnClickListener {
             val data: String = editText.text.toString()
             setFragmentResult(STRING_DATA_REQUEST_KEY, bundleOf(STRING_DATA_BUNDLE_KEY to data))
 
@@ -47,6 +48,10 @@ class FirstFragment : Fragment() {
             fragmentTransaction.replace(R.id.fragment_container, secondFragment)
             fragmentTransaction.addToBackStack(null)
             fragmentTransaction.commit()
+        }
+
+        toolbar.setNavigationOnClickListener {
+            requireActivity().onBackPressed()
         }
 
         return view
