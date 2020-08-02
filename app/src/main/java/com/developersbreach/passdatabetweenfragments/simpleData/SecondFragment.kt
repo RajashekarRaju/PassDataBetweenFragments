@@ -35,7 +35,7 @@ class SecondFragment : Fragment() {
         val toolbar: Toolbar = view.findViewById(R.id.toolbar_second_fragment)
         val textView: TextView = view.findViewById(R.id.second_text_view)
 
-        setFragmentResultListener(STRING_DATA_REQUEST_KEY) { resultKey, bundle ->
+        setFragmentResultListener(STRING_DATA_REQUEST_KEY) { _, bundle ->
             val resultData: String = bundle.get(STRING_DATA_BUNDLE_KEY) as String
             textView.text = resultData
         }

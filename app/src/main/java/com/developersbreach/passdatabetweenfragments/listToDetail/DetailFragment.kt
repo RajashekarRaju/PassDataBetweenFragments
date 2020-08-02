@@ -36,7 +36,7 @@ class DetailFragment : Fragment() {
         val detailNameTextView: TextView = view.findViewById(R.id.detail_fragment_name_text_view)
         val detailYearTextView: TextView = view.findViewById(R.id.detail_fragment_year_text_view)
 
-        setFragmentResultListener(SPORTS_DATA_REQUEST_KEY) { resultKey, bundle ->
+        setFragmentResultListener(SPORTS_DATA_REQUEST_KEY) { _, bundle ->
             val data: Sports? = bundle.getParcelable(SPORTS_DATA_BUNDLE_KEY)
             detailNameTextView.text = data?.name
             detailYearTextView.text = data?.year
